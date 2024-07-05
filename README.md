@@ -1,24 +1,13 @@
 # data-frete
 
-## Project setup
-```
-npm install
-```
+## Tecnologias utilizadas no projeto
+- Vue.js 3
+- Bootstrap 5
+- Docker
 
-### Compiles and hot-reloads for development
+## Como inicializar e executar o projeto:
+- Dentro da pasta raíz do projeto executar (alterar username pelo nome de usuário do Docker):
 ```
-npm run serve
+docker build -t username/data-frete .
+docker run username/data-frete 
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
