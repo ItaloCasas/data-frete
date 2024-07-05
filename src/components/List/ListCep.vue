@@ -11,7 +11,7 @@ onMounted(() => {
 })
 
 function loadList() {
-  fetch("http://localhost/datafrete/backend/service.php?action=list")
+  fetch("http://localhost/service.php?action=list")
     .then((response) => response.json())
     .then((data) => {
       listData.value = data.value;
@@ -23,7 +23,7 @@ function edit(id, lat, lon) {
 }
 
 function remove(id) {
-  fetch("http://localhost/datafrete/backend/service.php?action=delete&id="+id)
+  fetch("http://localhost/service.php?action=delete&id="+id)
     .then((response) => response.json())
     .then((data) => {
       if (data.success && data.success == 1) {

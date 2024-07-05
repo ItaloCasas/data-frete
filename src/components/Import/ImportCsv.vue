@@ -24,7 +24,7 @@ function insertData(importedArray) {
       unmaskCep(importedArray[0][0]) +
       "&cepDes=" +
       unmaskCep(importedArray[0][1]);
-    fetch("http://localhost/datafrete/backend/service.php?action=import" + values)
+    fetch("http://localhost/service.php?action=import" + values)
       .then((response) => response.json())
       .then((data) => {
         insertedData.value.push({

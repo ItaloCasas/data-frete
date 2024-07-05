@@ -63,7 +63,7 @@ function validateCEP(cep) {
     return alert("CEP inválido!");
   }
   fetch(
-    "http://localhost/datafrete/backend/service.php?action=validateCEP&value=" +
+    "http://localhost/service.php?action=validateCEP&value=" +
       unmaskedCep
   )
     .then((response) => response.json())
@@ -98,7 +98,7 @@ function calculateDistance() {
     values += "&lon2=" + lonDestino.value;
 
     fetch(
-      "http://localhost/datafrete/backend/service.php?action=calculateDistance" + values
+      "http://localhost/service.php?action=calculateDistance" + values
     )
       .then((response) => response.json())
       .then((data) => {
@@ -129,7 +129,7 @@ function add() {
       "&distCalc=" +
       unmaskDistancia(distCalculada.value);
 
-    fetch("http://localhost/datafrete/backend/service.php?action=persist" + values)
+    fetch("http://localhost/service.php?action=persist" + values)
       .then((response) => response.json())
       .then((data) => {
         if (data && data.success && data.success == 1) {
@@ -154,7 +154,7 @@ function edit() {
       "&distCalc=" +
       unmaskDistancia(distCalculada.value);
 
-    fetch("http://localhost/datafrete/backend/service.php?action=update" + values)
+    fetch("http://localhost/service.php?action=update" + values)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
