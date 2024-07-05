@@ -8,8 +8,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
+    "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "maska": "^3.0.0-beta4",
+    "vue": "^3.2.13",
+    "vue-papa-parse": "^3.1.0",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

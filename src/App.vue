@@ -1,18 +1,39 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+};
 </script>
+
+<template>
+  <ul class="nav nav-tabs mx-auto w-75">
+    <li
+      ref="tabCadastro"
+      class="nav-item nav-link"
+      :class="{ active: $route.path === '/add' || $route.path === '/' }"
+    >
+      <RouterLink to="/add">Cadastro</RouterLink>
+    </li>
+
+    <li
+      ref="tabImporta"
+      class="nav-item nav-link"
+      :class="{ active: $route.path === '/import' }"
+    >
+      <RouterLink to="/import">Importar CSV</RouterLink>
+    </li>
+
+    <li
+      ref="tabLista"
+      class="nav-item nav-link"
+      :class="{ active: $route.path === '/list' }"
+    >
+      <RouterLink to="/list">Lista</RouterLink>
+    </li>
+  </ul>
+  <main>
+    <RouterView />
+  </main>
+</template>
 
 <style>
 #app {
