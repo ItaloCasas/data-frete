@@ -35,6 +35,17 @@ function insertData(importedArray) {
         });
         importedArray.shift();
         insertData(importedArray);
+      })
+      .catch((error) => {
+        console.log(error);
+        insertedData.value.push({
+          id: insertedData.value.length,
+          cep_ori: importedArray[0][0],
+          cep_des: importedArray[0][1],
+          result: "Falha",
+        });
+        importedArray.shift();
+        insertData(importedArray);
       });
   } else {
     alert("Importação finalizada.");
