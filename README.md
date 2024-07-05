@@ -11,3 +11,6 @@
 docker build -t username/data-frete .
 docker run username/data-frete 
 ```
+
+
+O arquivo de importação de exemplo "import.csv" está na pasta raíz do projeto.
